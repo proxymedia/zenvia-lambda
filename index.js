@@ -10,9 +10,7 @@ exports.handler = function(event, context) {
   }
 
   /** Transforma a mensagem json vinda do SNS em um objeto */
-  if (!event = JSON.parse(event.Records[0].Sns.Message)) {
-    context.fail("error while parsing json message");
-  }
+  event = JSON.parse(event.Records[0].Sns.Message);
 
   /** Faz a validação dos campos obrigatórios user, from, to e msg */
   if (!event.hasOwnProperty('user') || !event.hasOwnProperty('password')) {
