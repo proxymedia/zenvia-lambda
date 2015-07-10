@@ -4,7 +4,7 @@ Função para plataforma AWS Lambda para realizar o envio de notificações SMS 
 
 **Como funciona**
 
-Zenvia-Lambda é uma função escrita em Node.js para funcionar dentro do ambiente [AWS Lambda](http://aws.amazon.com/lambda/). Funciona como um microserviço que é acionado a partir de uma notificação rebida a partir do [AWS SNS](http://aws.amazon.com/sns/).
+Zenvia-Lambda é uma função escrita em Node.js para funcionar dentro do ambiente [AWS Lambda](http://aws.amazon.com/lambda/). Funciona como um microserviço que é acionado a partir de uma notificação rebida do [SNS](http://aws.amazon.com/sns/).
 
 Esta função foi desenvolvida pela ProxyMedia e é parte integrante de nossos sistemas de marketing digital.
 
