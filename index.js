@@ -1,5 +1,7 @@
 exports.handler = function(event, context) {
 
+  event = JSON.parse(event.Records[0].Sns.Message);
+
   var request = require('request');
 
   var auth = new Buffer(event.user + ":" + event.password).toString('base64');
@@ -29,6 +31,7 @@ exports.handler = function(event, context) {
               resposta = JSON.parse(body);
               context.succeed();
           } else {
+            console.log(response);
             context.fail({error: error, response:response, body: body });
           }
       }
